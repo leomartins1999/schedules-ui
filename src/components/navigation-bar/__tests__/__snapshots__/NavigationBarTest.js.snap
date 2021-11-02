@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the NavBar 1`] = `
+<nav
+  className="navbar navbar-expand navbar-dark bg-primary"
+>
+  <div
+    className="container"
+  >
+    <a
+      className="navbar-brand"
+      href="#home"
+    >
+      MySchedule
+    </a>
+    <div
+      className="me-auto navbar-nav"
+      onKeyDown={[Function]}
+    >
+      <a
+        className="nav-link"
+        data-rr-ui-event-key="#home"
+        disabled={false}
+        href="#home"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        className="nav-link"
+        data-rr-ui-event-key="#schedules"
+        disabled={false}
+        href="#schedules"
+        onClick={[Function]}
+      >
+        Schedules
+      </a>
+      <a
+        className="nav-link"
+        data-rr-ui-event-key="#compare"
+        disabled={false}
+        href="#compare"
+        onClick={[Function]}
+      >
+        Compare
+      </a>
+    </div>
+  </div>
+</nav>
+`;

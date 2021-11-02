@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a calculating schedule list item 1`] = `
+<a
+  className="d-flex justify-content-between align-items-center list-group-item list-group-item-info list-group-item-action"
+  href="#schedules/3"
+  onClick={[Function]}
+>
+  Calculating schedule
+  <span
+    className="badge rounded-pill bg-primary"
+    variant="primary"
+  >
+    CALCULATING
+  </span>
+</a>
+`;
+
+exports[`renders a done schedule list item 1`] = `
+<a
+  className="d-flex justify-content-between align-items-center list-group-item list-group-item-action"
+  href="#schedules/1"
+  onClick={[Function]}
+>
+  Done schedule
+  <span
+    className="badge rounded-pill bg-primary"
+    variant="primary"
+  >
+    DONE
+  </span>
+</a>
+`;
+
+exports[`renders an error schedule list item 1`] = `
+<a
+  className="d-flex justify-content-between align-items-center list-group-item list-group-item-danger list-group-item-action"
+  href="#schedules/4"
+  onClick={[Function]}
+>
+  Error schedule
+  <span
+    className="badge rounded-pill bg-primary"
+    variant="primary"
+  >
+    ERROR
+  </span>
+</a>
+`;
+
+exports[`renders an importing schedule list item 1`] = `
+<a
+  className="d-flex justify-content-between align-items-center list-group-item list-group-item-warning list-group-item-action"
+  href="#schedules/2"
+  onClick={[Function]}
+>
+  Importing schedule
+  <span
+    className="badge rounded-pill bg-primary"
+    variant="primary"
+  >
+    IMPORTING
+  </span>
+</a>
+`;
