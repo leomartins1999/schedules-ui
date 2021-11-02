@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "My favorite schedule",
+        "status": "DONE"
+    },
+    {
+        "id": 2,
+        "name": "My (probably) fastest schedule",
+        "status": "CALCULATING"
+    },
+    {
+        "id": 3,
+        "name": "My schedule that failed for some reason",
+        "status": "ERROR"
+    },
+    {
+        "id": 4,
+        "name": "My schedule that takes forever to import",
+        "status": "IMPORTING"
+    }
+]

@@ -4,7 +4,7 @@ import {
 import Container from 'react-bootstrap/Container';
 
 import HomePage from './HomePage';
-import SchedulesListingPage from './SchedulesListingPage';
+import ScheduleListingPage from './schedule-listing-page/ScheduleListingPage'
 import SchedulePage from './SchedulePage';
 import ComparePage from './ComparePage';
 
@@ -16,7 +16,7 @@ function SchedulePageWithId() {
     );
 }
 
-function withRouting() {
+function withRouting(service) {
     return (
         <Router>
             <Switch>
@@ -25,7 +25,7 @@ function withRouting() {
                 </Route>
                 <Route path="/schedules/:id" children={<SchedulePageWithId />} />
                 <Route path="/schedules">
-                    <SchedulesListingPage />
+                    <ScheduleListingPage service={service} />
                 </Route>
                 <Route path="/compare">
                     <ComparePage />
@@ -38,10 +38,10 @@ function withRouting() {
     );
 }
 
-function PageContainer() {
+function PageContainer({ service }) {
     return (
         <Container className="bg-light">
-            {withRouting()}
+            {withRouting(service)}
         </Container>
     );
 }
