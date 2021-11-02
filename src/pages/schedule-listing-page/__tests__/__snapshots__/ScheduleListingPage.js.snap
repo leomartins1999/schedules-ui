@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders error 1`] = `
+<div
+  className="pt-3 pb-3 list-group"
+  onKeyDown={[Function]}
+>
+  <h2>
+    Schedules
+  </h2>
+  <div
+    className="spinner-border"
+  />
+</div>
+`;
+
+exports[`renders loading 1`] = `
+<div
+  className="pt-3 pb-3 list-group"
+  onKeyDown={[Function]}
+>
+  <h2>
+    Schedules
+  </h2>
+  <div
+    className="spinner-border"
+  />
+</div>
+`;
+
+exports[`renders no schedules 1`] = `
+<div
+  className="pt-3 pb-3 list-group"
+  onKeyDown={[Function]}
+>
+  <h2>
+    Schedules
+  </h2>
+  <div
+    className="spinner-border"
+  />
+</div>
+`;
+
+exports[`renders the schedules list 1`] = `
+<div
+  className="pt-3 pb-3 list-group"
+  onKeyDown={[Function]}
+>
+  <h2>
+    Schedules
+  </h2>
+  <div
+    className="spinner-border"
+  />
+</div>
+`;
