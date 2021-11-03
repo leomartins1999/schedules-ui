@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
 import ScheduleListingPage from '../ScheduleListingPage';
-import { ErrorState, LoadingState, SuccessState } from '../../../state/State';
+import { ErrorState, LoadingState, SuccessState } from '../../../utils/State';
 
 it('renders no schedules', () => {
     const service = {
