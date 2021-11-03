@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Create Schedule Form 1`] = `
+<div
+  className="pt-2 pb-2 accordion"
+>
+  <div
+    className="accordion-item"
+  >
+    <h2
+      className="accordion-header"
+    >
+      <button
+        aria-expanded={false}
+        className="accordion-button collapsed"
+        onClick={[Function]}
+        type="button"
+      >
+        Upload new Schedule
+      </button>
+    </h2>
+    <div
+      aria-expanded={null}
+      className="accordion-collapse collapse"
+    >
+      <div
+        className="accordion-body"
+      >
+        <form
+          className="pt-1"
+          onSubmit={[Function]}
+        >
+          <div
+            className="mb-3"
+          >
+            <label
+              className="form-label"
+              htmlFor="formBasicEmail"
+            >
+              Schedule name
+            </label>
+            <input
+              className="form-control"
+              id="formBasicEmail"
+              onChange={[Function]}
+              placeholder="Enter schedule name"
+              required={true}
+              type="text"
+            />
+          </div>
+          <div
+            className="mb-3"
+          >
+            <label
+              className="form-label"
+              htmlFor="formFile"
+            >
+              File
+            </label>
+            <input
+              className="form-control"
+              id="formFile"
+              onChange={[Function]}
+              required={true}
+              type="file"
+            />
+          </div>
+          <button
+            className="btn btn-primary"
+            disabled={false}
+            type="submit"
+          >
+            Create Schedule
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
