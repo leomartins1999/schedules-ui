@@ -3,8 +3,8 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Spinner from "react-bootstrap/Spinner";
 import Alert from "react-bootstrap/Alert";
 
-import ScheduleListItem from "../../components/schedule-list-item/ScheduleListItem";
-import { LoadingState } from "../../state/State";
+import { ScheduleListItem, CreateScheduleForm } from "../../components/index";
+import { LoadingState } from "../../utils/State";
 
 function renderSchedules(schedulesState) {
   switch (schedulesState.status) {
@@ -23,10 +23,13 @@ function ScheduleListingPage({ service }) {
   }, []);
 
   return (
-    <ListGroup className="pt-3 pb-3">
-      <h2>Schedules</h2>
-      {renderSchedules(schedulesState)}
-    </ListGroup>
+    <>
+      <ListGroup>
+        <h2>Schedules</h2>
+        {renderSchedules(schedulesState)}
+      </ListGroup>
+      <CreateScheduleForm service={service} />
+    </>
   );
 }
 
