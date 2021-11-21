@@ -12,7 +12,8 @@ async function getSchedules() {
 async function createSchedule(name, file) {
     const options = {
         method: "POST",
-        body: await buildCreateScheduleBody(name, file)
+        body: await buildCreateScheduleBody(name, file),
+        headers: buildRequestHeaders()
     }
 
     const resp = await fetch(SCHEDULES_PATH, options);
@@ -29,6 +30,12 @@ async function buildCreateScheduleBody(name, file) {
             content: await readFile(file)
         }
     )
+}
+
+function buildRequestHeaders() {
+    return {
+        "Content-Type": "application/json"
+    }
 }
 
 const SchedulesAPIGateway = {
