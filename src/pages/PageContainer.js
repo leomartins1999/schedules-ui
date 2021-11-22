@@ -3,7 +3,7 @@ import {
 } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 
-import HomePage from './HomePage';
+import HomePage from './home-page/HomePage';
 import ScheduleListingPage from './schedule-listing-page/ScheduleListingPage'
 import SchedulePage from './SchedulePage';
 import ComparePage from './ComparePage';

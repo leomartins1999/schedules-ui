@@ -7,12 +7,11 @@ exports[`renders the NavBar 1`] = `
   <div
     className="container"
   >
-    <a
+    <span
       className="navbar-brand"
-      href="#home"
     >
-      MySchedule
-    </a>
+      Schedule Comparator
+    </span>
     <div
       className="me-auto navbar-nav"
       onKeyDown={[Function]}
