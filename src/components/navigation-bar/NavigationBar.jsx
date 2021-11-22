@@ -6,7 +6,7 @@ function NavigationBar() {
     return (
         <Navbar bg="primary" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">MySchedule</Navbar.Brand>
+                <Navbar.Brand>Schedule Comparator</Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="#home">Home</Nav.Link>
                     <Nav.Link href="#schedules">Schedules</Nav.Link>
