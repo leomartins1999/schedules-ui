@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the HomePage 1`] = `
+<div
+  className="p-2"
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-body"
+    >
+      <div
+        className="text-center card-title h5"
+      >
+        <h1>
+          ISCTE Schedules Comparator App
+        </h1>
+      </div>
+      <p
+        className="card-text"
+      >
+        This app can be used to compare already generated schedules and sort out which one most benefits the users.
+        <br />
+         It can be used for:
+        <br />
+         - Listing already uploaded schedules
+        <br />
+         - Uploading new schedules
+        <br />
+         - Consulting the timetable for already uploaded schedules
+        <br />
+         - Selecting and comparing uploaded schedules
+        <br />
+         - Executing a comparison selecting the metrics relevant for said comparison
+      </p>
+    </div>
+    <div
+      className="text-muted text-center card-footer"
+    >
+      Project developed for the ADS project of the Master's Degree in Computer Engineering at ISCTE
+      <br />
+       © Leonardo Martins, 2021
+    </div>
+  </div>
+</div>
+`;
