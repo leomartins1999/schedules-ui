@@ -6,21 +6,25 @@ import Alert from "react-bootstrap/Alert";
 import { ScheduleListItem, CreateScheduleForm } from "../../components/index";
 import { LoadingState } from "../../utils/State";
 
+async function fetchSchedules(service, setSchedulesState) {
+  const result = await service.getSchedules();
+  setSchedulesState(result);
+}
+
 function renderSchedules(schedulesState) {
   switch (schedulesState.status) {
-    case "LOADING": return <Spinner animation="border" />;
     case "ERROR": return <Alert variant="danger">An error has occured loading the schedules</Alert>;
     case "SUCCESS": return schedulesState.value.map(s => <ScheduleListItem key={s.id} schedule={s} />);
+    default: return <Spinner animation="border" />;
   }
 }
 
 function ScheduleListingPage({ service }) {
   const [schedulesState, setSchedulesState] = useState(LoadingState());
 
-  useEffect(async () => {
-    const result = await service.getSchedules();
-    setSchedulesState(result);
-  }, []);
+  useEffect(() => {
+    fetchSchedules(service, setSchedulesState);
+  }, [service]);
 
   return (
     <>
