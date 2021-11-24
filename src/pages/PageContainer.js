@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 
 import HomePage from './home-page/HomePage';
 import ScheduleListingPage from './schedule-listing-page/ScheduleListingPage'
-import SchedulePage from './SchedulePage';
+import SchedulePage from './schedule-page/SchedulePage';
 import ComparePage from './ComparePage';
 
 function SchedulePageWithId() {
