@@ -28,17 +28,17 @@ function SchedulePage({ scheduleId, service }) {
     // trigger fetch of classes and dates for schedule
     useEffect(() => {
         fetchScheduleSelectorInformation(service, scheduleId, scheduleDetails.status, setKlass, setStartDate, setEndDate, setSelectorInformation)
-    }, [scheduleDetails])
+    }, [scheduleId, service, scheduleDetails])
 
     // trigger fetch of lectures
     useEffect(() => {
         fetchScheduleLectures(service, scheduleId, klass, startDate, endDate, setLectures)
-    }, [klass, startDate, endDate])
+    }, [scheduleId, service, klass, startDate, endDate])
 
     // trigger fetch of scores
     useEffect(() => {
         fetchScheduleScores(service, scheduleId, setScores)
-    }, [scheduleDetails])
+    }, [scheduleId, service, scheduleDetails])
 
     return (
         <div className="p-2">
