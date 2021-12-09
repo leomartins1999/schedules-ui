@@ -1,0 +1,58 @@
+[
+    {
+        "lecture": "EUVI",
+        "room": "B3.0.1",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "day": "2021-03-01"
+    },
+    {
+        "lecture": "EUVI",
+        "room": "B3.0.1",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "day": "2021-03-01"
+    },
+    {
+        "lecture": "ADS",
+        "room": "A0.0.1",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "day": "2021-03-03"
+    },
+    {
+        "lecture": "ADS",
+        "room": "A0.0.1",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "day": "2021-03-03"
+    },
+    {
+        "lecture": "GSI",
+        "room": "C2.0.15",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "day": "2021-03-05"
+    },
+    {
+        "lecture": "GSI",
+        "room": "C2.0.15",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "day": "2021-03-05"
+    },
+    {
+        "lecture": "SI",
+        "room": "D1.0.10",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "day": "2021-03-05"
+    },
+    {
+        "lecture": "SI",
+        "room": "D1.0.10",
+        "start_time": "21:00:00",
+        "end_time": "22:30:00",
+        "day": "2021-03-05"
+    }
+]

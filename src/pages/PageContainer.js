@@ -5,14 +5,14 @@ import Container from 'react-bootstrap/Container';
 
 import HomePage from './home-page/HomePage';
 import ScheduleListingPage from './schedule-listing-page/ScheduleListingPage'
-import SchedulePage from './SchedulePage';
+import SchedulePage from './schedule-page/SchedulePage';
 import ComparePage from './ComparePage';
 
-function SchedulePageWithId() {
+function SchedulePageWithId({ service }) {
     const { id } = useParams();
 
     return (
-        <SchedulePage scheduleId={id} />
+        <SchedulePage scheduleId={id} service={service} />
     );
 }
 
@@ -23,7 +23,7 @@ function withRouting(service) {
                 <Route path="/home">
                     <HomePage />
                 </Route>
-                <Route path="/schedules/:id" children={<SchedulePageWithId />} />
+                <Route path="/schedules/:id" children={<SchedulePageWithId service={service} />} />
                 <Route path="/schedules">
                     <ScheduleListingPage service={service} />
                 </Route>
