@@ -71,6 +71,35 @@ const SchedulesService = (gateway) => {
         }
     }
 
+    async function getSchedulesScores() {
+        try {
+            const schedules = await gateway.getSchedules()
+
+            const results = await Promise.all(
+                schedules
+                    .filter(s => s.status === "DONE")
+                    .map(s => s.id)
+                    .map(id => gateway.getScheduleScores(id))
+            )
+
+            const scores = results
+                .map(score => {
+                    const scoreWithName = score
+
+                    scoreWithName.name = schedules
+                        .find(schedule => schedule.id === score.schedule_id)
+                        .name
+                    return scoreWithName
+                })
+
+            return SuccessState(scores)
+
+        } catch (err) {
+            console.log(err)
+            return ErrorState()
+        }
+    }
+
     return {
         getSchedules,
         createSchedule,
@@ -78,7 +107,8 @@ const SchedulesService = (gateway) => {
         getScheduleClasses,
         getScheduleDates,
         getScheduleLectures,
-        getScheduleScores
+        getScheduleScores,
+        getSchedulesScores
     }
 };
 

@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import HomePage from './home-page/HomePage';
 import ScheduleListingPage from './schedule-listing-page/ScheduleListingPage'
 import SchedulePage from './schedule-page/SchedulePage';
-import ComparePage from './ComparePage';
+import ComparePage from './compare-page/ComparePage';
 
 function SchedulePageWithId({ service }) {
     const { id } = useParams();
@@ -28,7 +28,7 @@ function withRouting(service) {
                     <ScheduleListingPage service={service} />
                 </Route>
                 <Route path="/compare">
-                    <ComparePage />
+                    <ComparePage service={service} />
                 </Route>
                 <Route path="/">
                     <Redirect to="/home" />
