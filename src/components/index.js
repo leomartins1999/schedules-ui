@@ -5,6 +5,7 @@ import ScheduleDetails from "./schedule-details/ScheduleDetails";
 import ScheduleLectures from "./schedule-lectures/ScheduleLectures";
 import ScheduleScores from "./schedule-scores/ScheduleScores";
 import ScheduleSelector from "./schedule-selector/ScheduleSelector";
+import DefaultComparisonWidget from "./default-comparison-widget/DefaultComparisonWidget";
 
 export {
     NavigationBar,
@@ -13,5 +14,6 @@ export {
     ScheduleDetails,
     ScheduleLectures,
     ScheduleScores,
-    ScheduleSelector
+    ScheduleSelector,
+    DefaultComparisonWidget
 }
