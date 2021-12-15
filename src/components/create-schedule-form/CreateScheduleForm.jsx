@@ -4,7 +4,6 @@ import Spinner from "react-bootstrap/Spinner";
 
 import Accordion from "react-bootstrap/Accordion"
 import { useState } from "react";
-import { useHistory } from "react-router";
 
 function handleSubmit(event, args, functions) {
     const form = event.currentTarget;
@@ -16,21 +15,23 @@ function handleSubmit(event, args, functions) {
     createSchedule(args, functions)
 }
 
-async function createSchedule({ name, file }, { setLoading, createSchedule, redirectTo }) {
+async function createSchedule({ name, file }, { setLoading, createSchedule, setName, onCreate }) {
     setLoading(true)
 
     const resp = await createSchedule(name, file)
 
-    if (resp.status === "SUCCESS") redirectTo(`/schedules/${resp.value}`);
+    if (resp.status === "SUCCESS") {
+        setLoading(false)
+        onCreate()
+        setName('')
+    }
     else {
         console.log("Error creating schedule!");
         setLoading(false)
     }
 }
 
-function CreateScheduleForm({ service }) {
-    const history = useHistory()
-
+function CreateScheduleForm({ service, onCreate }) {
     const [name, setName] = useState(null)
     const [file, setFile] = useState(null)
     const [loading, setLoading] = useState(false);
@@ -43,11 +44,12 @@ function CreateScheduleForm({ service }) {
     const functions = {
         createSchedule: service.createSchedule,
         setLoading: setLoading,
-        redirectTo: history?.push
+        onCreate: onCreate,
+        setName: setName
     }
 
     return (
-        <Accordion className="pt-2 pb-2">
+        <Accordion className="pt-2">
             <Accordion.Item eventKey="0">
                 <Accordion.Header>Upload new Schedule</Accordion.Header>
                 <Accordion.Body>
