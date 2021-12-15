@@ -16,7 +16,7 @@ function renderPlot(scores) {
 function renderScore(score) {
     return {
         type: 'scatterpolar',
-        name: score.schedule_name,
+        name: score.name,
         r: [score.pct_overflowing_lectures * 100, score.pct_overqualified_rooms_for_lectures * 100, score.nr_used_rooms],
         theta: ['% Overflowing Lectures', '% Overqualified room for lectures', 'NR used rooms'],
         fill: 'toself'

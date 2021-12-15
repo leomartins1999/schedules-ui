@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Card from 'react-bootstrap/Card'
 
 import { DefaultComparisonWidget } from '../../components/index'
 import { LoadingState } from '../../utils/State';
@@ -16,12 +17,18 @@ function ComparePage({ service }) {
   }, [service])
 
   return (
-    <>
-      <h2>Compare Page!</h2>
-      <DefaultComparisonWidget
-        scores={scores}
-      />
-    </>
+    <div className="p-2">
+      <Card>
+        <Card.Header>
+          <h3>Compare Schedules</h3>
+        </Card.Header>
+        <Card.Body>
+          <DefaultComparisonWidget
+            scores={scores}
+          />
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
 
