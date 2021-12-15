@@ -1,369 +1,425 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders error 1`] = `
-Array [
+<div
+  className="p-2"
+>
   <div
-    className="list-group"
-    onKeyDown={[Function]}
-  >
-    <h2>
-      Schedules
-    </h2>
-    <div
-      className="spinner-border"
-    />
-  </div>,
-  <div
-    className="pt-2 pb-2 accordion"
+    className="card"
   >
     <div
-      className="accordion-item"
+      className="card-header"
     >
-      <h2
-        className="accordion-header"
-      >
-        <button
-          aria-expanded={false}
-          className="accordion-button collapsed"
-          onClick={[Function]}
-          type="button"
-        >
-          Upload new Schedule
-        </button>
-      </h2>
+      <h3>
+        Schedules
+      </h3>
+    </div>
+    <div
+      className="card-body"
+    >
       <div
-        aria-expanded={null}
-        className="accordion-collapse collapse"
+        className="list-group"
+        onKeyDown={[Function]}
       >
         <div
-          className="accordion-body"
+          className="spinner-border"
+        />
+      </div>
+      <div
+        className="pt-2 accordion"
+      >
+        <div
+          className="accordion-item"
         >
-          <form
-            className="pt-1"
-            onSubmit={[Function]}
+          <h2
+            className="accordion-header"
+          >
+            <button
+              aria-expanded={false}
+              className="accordion-button collapsed"
+              onClick={[Function]}
+              type="button"
+            >
+              Upload new Schedule
+            </button>
+          </h2>
+          <div
+            aria-expanded={null}
+            className="accordion-collapse collapse"
           >
             <div
-              className="mb-3"
+              className="accordion-body"
             >
-              <label
-                className="form-label"
-                htmlFor="formBasicEmail"
+              <form
+                className="pt-1"
+                onSubmit={[Function]}
               >
-                Schedule name
-              </label>
-              <input
-                className="form-control"
-                id="formBasicEmail"
-                onChange={[Function]}
-                placeholder="Enter schedule name"
-                required={true}
-                type="text"
-              />
+                <div
+                  className="mb-3"
+                >
+                  <label
+                    className="form-label"
+                    htmlFor="formBasicEmail"
+                  >
+                    Schedule name
+                  </label>
+                  <input
+                    className="form-control"
+                    id="formBasicEmail"
+                    onChange={[Function]}
+                    placeholder="Enter schedule name"
+                    required={true}
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="mb-3"
+                >
+                  <label
+                    className="form-label"
+                    htmlFor="formFile"
+                  >
+                    File
+                  </label>
+                  <input
+                    className="form-control"
+                    id="formFile"
+                    onChange={[Function]}
+                    required={true}
+                    type="file"
+                  />
+                </div>
+                <button
+                  className="btn btn-primary"
+                  disabled={false}
+                  type="submit"
+                >
+                  Create Schedule
+                </button>
+              </form>
             </div>
-            <div
-              className="mb-3"
-            >
-              <label
-                className="form-label"
-                htmlFor="formFile"
-              >
-                File
-              </label>
-              <input
-                className="form-control"
-                id="formFile"
-                onChange={[Function]}
-                required={true}
-                type="file"
-              />
-            </div>
-            <button
-              className="btn btn-primary"
-              disabled={false}
-              type="submit"
-            >
-              Create Schedule
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`renders loading 1`] = `
-Array [
+<div
+  className="p-2"
+>
   <div
-    className="list-group"
-    onKeyDown={[Function]}
-  >
-    <h2>
-      Schedules
-    </h2>
-    <div
-      className="spinner-border"
-    />
-  </div>,
-  <div
-    className="pt-2 pb-2 accordion"
+    className="card"
   >
     <div
-      className="accordion-item"
+      className="card-header"
     >
-      <h2
-        className="accordion-header"
-      >
-        <button
-          aria-expanded={false}
-          className="accordion-button collapsed"
-          onClick={[Function]}
-          type="button"
-        >
-          Upload new Schedule
-        </button>
-      </h2>
+      <h3>
+        Schedules
+      </h3>
+    </div>
+    <div
+      className="card-body"
+    >
       <div
-        aria-expanded={null}
-        className="accordion-collapse collapse"
+        className="list-group"
+        onKeyDown={[Function]}
       >
         <div
-          className="accordion-body"
+          className="spinner-border"
+        />
+      </div>
+      <div
+        className="pt-2 accordion"
+      >
+        <div
+          className="accordion-item"
         >
-          <form
-            className="pt-1"
-            onSubmit={[Function]}
+          <h2
+            className="accordion-header"
+          >
+            <button
+              aria-expanded={false}
+              className="accordion-button collapsed"
+              onClick={[Function]}
+              type="button"
+            >
+              Upload new Schedule
+            </button>
+          </h2>
+          <div
+            aria-expanded={null}
+            className="accordion-collapse collapse"
           >
             <div
-              className="mb-3"
+              className="accordion-body"
             >
-              <label
-                className="form-label"
-                htmlFor="formBasicEmail"
+              <form
+                className="pt-1"
+                onSubmit={[Function]}
               >
-                Schedule name
-              </label>
-              <input
-                className="form-control"
-                id="formBasicEmail"
-                onChange={[Function]}
-                placeholder="Enter schedule name"
-                required={true}
-                type="text"
-              />
+                <div
+                  className="mb-3"
+                >
+                  <label
+                    className="form-label"
+                    htmlFor="formBasicEmail"
+                  >
+                    Schedule name
+                  </label>
+                  <input
+                    className="form-control"
+                    id="formBasicEmail"
+                    onChange={[Function]}
+                    placeholder="Enter schedule name"
+                    required={true}
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="mb-3"
+                >
+                  <label
+                    className="form-label"
+                    htmlFor="formFile"
+                  >
+                    File
+                  </label>
+                  <input
+                    className="form-control"
+                    id="formFile"
+                    onChange={[Function]}
+                    required={true}
+                    type="file"
+                  />
+                </div>
+                <button
+                  className="btn btn-primary"
+                  disabled={false}
+                  type="submit"
+                >
+                  Create Schedule
+                </button>
+              </form>
             </div>
-            <div
-              className="mb-3"
-            >
-              <label
-                className="form-label"
-                htmlFor="formFile"
-              >
-                File
-              </label>
-              <input
-                className="form-control"
-                id="formFile"
-                onChange={[Function]}
-                required={true}
-                type="file"
-              />
-            </div>
-            <button
-              className="btn btn-primary"
-              disabled={false}
-              type="submit"
-            >
-              Create Schedule
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`renders no schedules 1`] = `
-Array [
+<div
+  className="p-2"
+>
   <div
-    className="list-group"
-    onKeyDown={[Function]}
-  >
-    <h2>
-      Schedules
-    </h2>
-    <div
-      className="spinner-border"
-    />
-  </div>,
-  <div
-    className="pt-2 pb-2 accordion"
+    className="card"
   >
     <div
-      className="accordion-item"
+      className="card-header"
     >
-      <h2
-        className="accordion-header"
-      >
-        <button
-          aria-expanded={false}
-          className="accordion-button collapsed"
-          onClick={[Function]}
-          type="button"
-        >
-          Upload new Schedule
-        </button>
-      </h2>
+      <h3>
+        Schedules
+      </h3>
+    </div>
+    <div
+      className="card-body"
+    >
       <div
-        aria-expanded={null}
-        className="accordion-collapse collapse"
+        className="list-group"
+        onKeyDown={[Function]}
       >
         <div
-          className="accordion-body"
+          className="spinner-border"
+        />
+      </div>
+      <div
+        className="pt-2 accordion"
+      >
+        <div
+          className="accordion-item"
         >
-          <form
-            className="pt-1"
-            onSubmit={[Function]}
+          <h2
+            className="accordion-header"
+          >
+            <button
+              aria-expanded={false}
+              className="accordion-button collapsed"
+              onClick={[Function]}
+              type="button"
+            >
+              Upload new Schedule
+            </button>
+          </h2>
+          <div
+            aria-expanded={null}
+            className="accordion-collapse collapse"
           >
             <div
-              className="mb-3"
+              className="accordion-body"
             >
-              <label
-                className="form-label"
-                htmlFor="formBasicEmail"
+              <form
+                className="pt-1"
+                onSubmit={[Function]}
               >
-                Schedule name
-              </label>
-              <input
-                className="form-control"
-                id="formBasicEmail"
-                onChange={[Function]}
-                placeholder="Enter schedule name"
-                required={true}
-                type="text"
-              />
+                <div
+                  className="mb-3"
+                >
+                  <label
+                    className="form-label"
+                    htmlFor="formBasicEmail"
+                  >
+                    Schedule name
+                  </label>
+                  <input
+                    className="form-control"
+                    id="formBasicEmail"
+                    onChange={[Function]}
+                    placeholder="Enter schedule name"
+                    required={true}
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="mb-3"
+                >
+                  <label
+                    className="form-label"
+                    htmlFor="formFile"
+                  >
+                    File
+                  </label>
+                  <input
+                    className="form-control"
+                    id="formFile"
+                    onChange={[Function]}
+                    required={true}
+                    type="file"
+                  />
+                </div>
+                <button
+                  className="btn btn-primary"
+                  disabled={false}
+                  type="submit"
+                >
+                  Create Schedule
+                </button>
+              </form>
             </div>
-            <div
-              className="mb-3"
-            >
-              <label
-                className="form-label"
-                htmlFor="formFile"
-              >
-                File
-              </label>
-              <input
-                className="form-control"
-                id="formFile"
-                onChange={[Function]}
-                required={true}
-                type="file"
-              />
-            </div>
-            <button
-              className="btn btn-primary"
-              disabled={false}
-              type="submit"
-            >
-              Create Schedule
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`renders the schedules list 1`] = `
-Array [
+<div
+  className="p-2"
+>
   <div
-    className="list-group"
-    onKeyDown={[Function]}
-  >
-    <h2>
-      Schedules
-    </h2>
-    <div
-      className="spinner-border"
-    />
-  </div>,
-  <div
-    className="pt-2 pb-2 accordion"
+    className="card"
   >
     <div
-      className="accordion-item"
+      className="card-header"
     >
-      <h2
-        className="accordion-header"
-      >
-        <button
-          aria-expanded={false}
-          className="accordion-button collapsed"
-          onClick={[Function]}
-          type="button"
-        >
-          Upload new Schedule
-        </button>
-      </h2>
+      <h3>
+        Schedules
+      </h3>
+    </div>
+    <div
+      className="card-body"
+    >
       <div
-        aria-expanded={null}
-        className="accordion-collapse collapse"
+        className="list-group"
+        onKeyDown={[Function]}
       >
         <div
-          className="accordion-body"
+          className="spinner-border"
+        />
+      </div>
+      <div
+        className="pt-2 accordion"
+      >
+        <div
+          className="accordion-item"
         >
-          <form
-            className="pt-1"
-            onSubmit={[Function]}
+          <h2
+            className="accordion-header"
+          >
+            <button
+              aria-expanded={false}
+              className="accordion-button collapsed"
+              onClick={[Function]}
+              type="button"
+            >
+              Upload new Schedule
+            </button>
+          </h2>
+          <div
+            aria-expanded={null}
+            className="accordion-collapse collapse"
           >
             <div
-              className="mb-3"
+              className="accordion-body"
             >
-              <label
-                className="form-label"
-                htmlFor="formBasicEmail"
+              <form
+                className="pt-1"
+                onSubmit={[Function]}
               >
-                Schedule name
-              </label>
-              <input
-                className="form-control"
-                id="formBasicEmail"
-                onChange={[Function]}
-                placeholder="Enter schedule name"
-                required={true}
-                type="text"
-              />
+                <div
+                  className="mb-3"
+                >
+                  <label
+                    className="form-label"
+                    htmlFor="formBasicEmail"
+                  >
+                    Schedule name
+                  </label>
+                  <input
+                    className="form-control"
+                    id="formBasicEmail"
+                    onChange={[Function]}
+                    placeholder="Enter schedule name"
+                    required={true}
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="mb-3"
+                >
+                  <label
+                    className="form-label"
+                    htmlFor="formFile"
+                  >
+                    File
+                  </label>
+                  <input
+                    className="form-control"
+                    id="formFile"
+                    onChange={[Function]}
+                    required={true}
+                    type="file"
+                  />
+                </div>
+                <button
+                  className="btn btn-primary"
+                  disabled={false}
+                  type="submit"
+                >
+                  Create Schedule
+                </button>
+              </form>
             </div>
-            <div
-              className="mb-3"
-            >
-              <label
-                className="form-label"
-                htmlFor="formFile"
-              >
-                File
-              </label>
-              <input
-                className="form-control"
-                id="formFile"
-                onChange={[Function]}
-                required={true}
-                type="file"
-              />
-            </div>
-            <button
-              className="btn btn-primary"
-              disabled={false}
-              type="submit"
-            >
-              Create Schedule
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;

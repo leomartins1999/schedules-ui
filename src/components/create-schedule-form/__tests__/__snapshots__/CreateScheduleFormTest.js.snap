@@ -2,7 +2,7 @@
 
 exports[`renders the Create Schedule Form 1`] = `
 <div
-  className="pt-2 pb-2 accordion"
+  className="pt-2 accordion"
 >
   <div
     className="accordion-item"
