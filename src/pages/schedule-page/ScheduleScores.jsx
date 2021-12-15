@@ -1,7 +1,9 @@
 import { ScheduleScores } from "../../components/index"
-import { renderStatefulContent } from "../../utils/State"
+import { renderStatefulContent, SUCCESS_STATE } from "../../utils/State"
 
-export async function fetchScheduleScores(service, scheduleId, setScheduleScores) {
+export async function fetchScheduleScores(service, scheduleId, scheduleState, setScheduleScores) {
+    if (scheduleState.status !== SUCCESS_STATE || scheduleState.value.status !== 'DONE') return;
+
     const result = await service.getScheduleScores(scheduleId);
     setScheduleScores(result);
 }
