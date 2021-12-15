@@ -27,7 +27,7 @@ function SchedulePage({ scheduleId, service }) {
 
     // trigger fetch of classes and dates for schedule
     useEffect(() => {
-        fetchScheduleSelectorInformation(service, scheduleId, scheduleDetails.status, setKlass, setStartDate, setEndDate, setSelectorInformation)
+        fetchScheduleSelectorInformation(service, scheduleId, scheduleDetails, setKlass, setStartDate, setEndDate, setSelectorInformation)
     }, [scheduleId, service, scheduleDetails])
 
     // trigger fetch of lectures
@@ -37,7 +37,7 @@ function SchedulePage({ scheduleId, service }) {
 
     // trigger fetch of scores
     useEffect(() => {
-        fetchScheduleScores(service, scheduleId, setScores)
+        fetchScheduleScores(service, scheduleId, scheduleDetails, setScores)
     }, [scheduleId, service, scheduleDetails])
 
     return (

@@ -1,8 +1,8 @@
 import { ErrorState, renderStatefulContent, SUCCESS_STATE, SuccessState } from "../../utils/State";
 import { ScheduleSelector } from "../../components";
 
-export async function fetchScheduleSelectorInformation(service, scheduleId, scheduleStatus, setKlass, setStartDate, setEndDate, setSelectorInformation) {
-    if (scheduleStatus !== SUCCESS_STATE) return;
+export async function fetchScheduleSelectorInformation(service, scheduleId, scheduleState, setKlass, setStartDate, setEndDate, setSelectorInformation) {
+    if (scheduleState.status !== SUCCESS_STATE || scheduleState.value.status !== 'DONE') return;
 
     const classesState = await service.getScheduleClasses(scheduleId);
     const datesState = await service.getScheduleDates(scheduleId);
