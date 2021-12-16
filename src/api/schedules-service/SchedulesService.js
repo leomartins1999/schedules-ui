@@ -6,7 +6,6 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getSchedules()
             return SuccessState(res)
         } catch (err) {
-            console.log(err)
             return ErrorState()
         }
     };
@@ -16,7 +15,6 @@ const SchedulesService = (gateway) => {
             const res = await gateway.createSchedule(name, file)
             return SuccessState(res.id)
         } catch (err) {
-            console.log(err)
             return ErrorState()
         }
     }
@@ -26,7 +24,6 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getScheduleDetails(scheduleId)
             return SuccessState(res)
         } catch (err) {
-            console.log(err)
             return ErrorState()
         }
     };
@@ -36,7 +33,6 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getScheduleClasses(scheduleId)
             return SuccessState(res)
         } catch (err) {
-            console.log(err)
             return ErrorState()
         }
     }
@@ -46,7 +42,6 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getScheduleDates(scheduleId)
             return SuccessState(res)
         } catch (err) {
-            console.log(err)
             return ErrorState()
         }
     }
@@ -56,7 +51,6 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getScheduleLectures(scheduleId, klass, startDate, endDate)
             return SuccessState(res)
         } catch (err) {
-            console.log(err)
             return ErrorState()
         }
     }
@@ -66,7 +60,6 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getScheduleScores(scheduleId)
             return SuccessState(res)
         } catch (err) {
-            console.log(err)
             return ErrorState()
         }
     }
@@ -95,7 +88,6 @@ const SchedulesService = (gateway) => {
             return SuccessState(scores)
 
         } catch (err) {
-            console.log(err)
             return ErrorState()
         }
     }
