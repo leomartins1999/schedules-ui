@@ -26,7 +26,6 @@ async function createSchedule({ name, file }, { setLoading, createSchedule, setN
         setName('')
     }
     else {
-        console.log("Error creating schedule!");
         setLoading(false)
     }
 }

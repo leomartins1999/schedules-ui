@@ -2,8 +2,6 @@ import Plot from 'react-plotly.js';
 import { renderStatefulContent } from '../../utils/State'
 
 function renderPlot(scores) {
-    console.log(scores)
-
     return renderStatefulContent(
         scores,
         v => <Plot

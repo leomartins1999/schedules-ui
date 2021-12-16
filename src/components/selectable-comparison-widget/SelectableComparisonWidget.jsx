@@ -12,8 +12,6 @@ const metricFieldToLabel = {
 }
 
 function renderMetricsPlot(scores, selectedMetrics) {
-    console.log(scores)
-
     return renderStatefulContent(
         scores,
         v => <Plot
