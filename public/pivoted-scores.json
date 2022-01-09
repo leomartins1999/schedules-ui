@@ -1,0 +1,282 @@
+{
+    "schedule_id": 10,
+    "scores": {
+        "week": [
+            {
+                "nr_used_rooms": 4,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 12,
+                "key": "2015-08-30 - 2015-09-06"
+            },
+            {
+                "nr_used_rooms": 15,
+                "pct_overqualified_rooms_for_lectures": 0.2,
+                "pct_overflowing_lectures": 0.08,
+                "nr_lectures": 50,
+                "key": "2015-09-06 - 2015-09-13"
+            },
+            {
+                "nr_used_rooms": 32,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.114583336,
+                "nr_lectures": 192,
+                "key": "2015-09-13 - 2015-09-20"
+            },
+            {
+                "nr_used_rooms": 88,
+                "pct_overqualified_rooms_for_lectures": 0.06074169,
+                "pct_overflowing_lectures": 0.22058824,
+                "nr_lectures": 1564,
+                "key": "2015-09-20 - 2015-09-27"
+            },
+            {
+                "nr_used_rooms": 94,
+                "pct_overqualified_rooms_for_lectures": 0.065659195,
+                "pct_overflowing_lectures": 0.21000521,
+                "nr_lectures": 1919,
+                "key": "2015-09-27 - 2015-10-04"
+            },
+            {
+                "nr_used_rooms": 95,
+                "pct_overqualified_rooms_for_lectures": 0.06300813,
+                "pct_overflowing_lectures": 0.19817074,
+                "nr_lectures": 1968,
+                "key": "2015-10-04 - 2015-10-11"
+            },
+            {
+                "nr_used_rooms": 95,
+                "pct_overqualified_rooms_for_lectures": 0.06246926,
+                "pct_overflowing_lectures": 0.20954254,
+                "nr_lectures": 2033,
+                "key": "2015-10-11 - 2015-10-18"
+            },
+            {
+                "nr_used_rooms": 97,
+                "pct_overqualified_rooms_for_lectures": 0.065513626,
+                "pct_overflowing_lectures": 0.20754717,
+                "nr_lectures": 1908,
+                "key": "2015-10-18 - 2015-10-25"
+            },
+            {
+                "nr_used_rooms": 96,
+                "pct_overqualified_rooms_for_lectures": 0.06356968,
+                "pct_overflowing_lectures": 0.19511002,
+                "nr_lectures": 2045,
+                "key": "2015-10-25 - 2015-11-01"
+            },
+            {
+                "nr_used_rooms": 97,
+                "pct_overqualified_rooms_for_lectures": 0.059435364,
+                "pct_overflowing_lectures": 0.18870728,
+                "nr_lectures": 2019,
+                "key": "2015-11-01 - 2015-11-08"
+            },
+            {
+                "nr_used_rooms": 96,
+                "pct_overqualified_rooms_for_lectures": 0.05783009,
+                "pct_overflowing_lectures": 0.18372568,
+                "nr_lectures": 1954,
+                "key": "2015-11-08 - 2015-11-15"
+            },
+            {
+                "nr_used_rooms": 97,
+                "pct_overqualified_rooms_for_lectures": 0.0638404,
+                "pct_overflowing_lectures": 0.19650874,
+                "nr_lectures": 2005,
+                "key": "2015-11-15 - 2015-11-22"
+            },
+            {
+                "nr_used_rooms": 97,
+                "pct_overqualified_rooms_for_lectures": 0.0625,
+                "pct_overflowing_lectures": 0.2112069,
+                "nr_lectures": 1856,
+                "key": "2015-11-22 - 2015-11-29"
+            },
+            {
+                "nr_used_rooms": 98,
+                "pct_overqualified_rooms_for_lectures": 0.07046071,
+                "pct_overflowing_lectures": 0.20271003,
+                "nr_lectures": 1845,
+                "key": "2015-11-29 - 2015-12-06"
+            },
+            {
+                "nr_used_rooms": 97,
+                "pct_overqualified_rooms_for_lectures": 0.072463766,
+                "pct_overflowing_lectures": 0.23333333,
+                "nr_lectures": 1380,
+                "key": "2015-12-06 - 2015-12-13"
+            },
+            {
+                "nr_used_rooms": 95,
+                "pct_overqualified_rooms_for_lectures": 0.08783784,
+                "pct_overflowing_lectures": 0.2792793,
+                "nr_lectures": 888,
+                "key": "2015-12-13 - 2015-12-20"
+            },
+            {
+                "nr_used_rooms": 0,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 0,
+                "key": "2015-12-20 - 2015-12-27"
+            },
+            {
+                "nr_used_rooms": 0,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 0,
+                "key": "2015-12-27 - 2016-01-03"
+            },
+            {
+                "nr_used_rooms": 16,
+                "pct_overqualified_rooms_for_lectures": 0.036363635,
+                "pct_overflowing_lectures": 0.12727273,
+                "nr_lectures": 55,
+                "key": "2016-01-03 - 2016-01-10"
+            },
+            {
+                "nr_used_rooms": 16,
+                "pct_overqualified_rooms_for_lectures": 0.027777778,
+                "pct_overflowing_lectures": 0.15277778,
+                "nr_lectures": 72,
+                "key": "2016-01-10 - 2016-01-17"
+            },
+            {
+                "nr_used_rooms": 15,
+                "pct_overqualified_rooms_for_lectures": 0.015384615,
+                "pct_overflowing_lectures": 0.092307694,
+                "nr_lectures": 65,
+                "key": "2016-01-17 - 2016-01-24"
+            },
+            {
+                "nr_used_rooms": 16,
+                "pct_overqualified_rooms_for_lectures": 0.10769231,
+                "pct_overflowing_lectures": 0.15384616,
+                "nr_lectures": 65,
+                "key": "2016-01-24 - 2016-01-31"
+            },
+            {
+                "nr_used_rooms": 10,
+                "pct_overqualified_rooms_for_lectures": 0.069767445,
+                "pct_overflowing_lectures": 0.18604651,
+                "nr_lectures": 43,
+                "key": "2016-01-31 - 2016-02-07"
+            },
+            {
+                "nr_used_rooms": 0,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 0,
+                "key": "2016-02-07 - 2016-02-14"
+            },
+            {
+                "nr_used_rooms": 2,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 3,
+                "key": "2016-02-14 - 2016-02-21"
+            },
+            {
+                "nr_used_rooms": 3,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 3,
+                "key": "2016-02-21 - 2016-02-28"
+            },
+            {
+                "nr_used_rooms": 2,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 3,
+                "key": "2016-02-28 - 2016-03-06"
+            },
+            {
+                "nr_used_rooms": 2,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 3,
+                "key": "2016-03-06 - 2016-03-13"
+            },
+            {
+                "nr_used_rooms": 2,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 3,
+                "key": "2016-03-13 - 2016-03-20"
+            },
+            {
+                "nr_used_rooms": 0,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 0,
+                "key": "2016-03-20 - 2016-03-27"
+            },
+            {
+                "nr_used_rooms": 0,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 0,
+                "key": "2016-03-27 - 2016-04-03"
+            },
+            {
+                "nr_used_rooms": 3,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 4,
+                "key": "2016-04-03 - 2016-04-10"
+            },
+            {
+                "nr_used_rooms": 0,
+                "pct_overqualified_rooms_for_lectures": 0.0,
+                "pct_overflowing_lectures": 0.0,
+                "nr_lectures": 0,
+                "key": "2016-04-10 - 2016-04-11"
+            }
+        ],
+        "weekday": [
+            {
+                "nr_used_rooms": 95,
+                "pct_overqualified_rooms_for_lectures": 0.04207864,
+                "pct_overflowing_lectures": 0.16992413,
+                "nr_lectures": 4349,
+                "key": "Monday"
+            },
+            {
+                "nr_used_rooms": 94,
+                "pct_overqualified_rooms_for_lectures": 0.053530514,
+                "pct_overflowing_lectures": 0.20204124,
+                "nr_lectures": 4801,
+                "key": "Tuesday"
+            },
+            {
+                "nr_used_rooms": 98,
+                "pct_overqualified_rooms_for_lectures": 0.05460099,
+                "pct_overflowing_lectures": 0.19377625,
+                "nr_lectures": 5238,
+                "key": "Wednesday"
+            },
+            {
+                "nr_used_rooms": 95,
+                "pct_overqualified_rooms_for_lectures": 0.07398435,
+                "pct_overflowing_lectures": 0.23891167,
+                "nr_lectures": 5366,
+                "key": "Thursday"
+            },
+            {
+                "nr_used_rooms": 96,
+                "pct_overqualified_rooms_for_lectures": 0.10400403,
+                "pct_overflowing_lectures": 0.21984386,
+                "nr_lectures": 3971,
+                "key": "Friday"
+            },
+            {
+                "nr_used_rooms": 32,
+                "pct_overqualified_rooms_for_lectures": 0.004310345,
+                "pct_overflowing_lectures": 0.077586204,
+                "nr_lectures": 232,
+                "key": "Saturday"
+            }
+        ]
+    }
+}

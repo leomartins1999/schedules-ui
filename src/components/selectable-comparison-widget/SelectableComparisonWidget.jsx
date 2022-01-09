@@ -4,12 +4,7 @@ import Form from 'react-bootstrap/Form'
 import { useState } from 'react'
 import Plot from 'react-plotly.js';
 import { renderStatefulContent } from '../../utils/State';
-
-const metricFieldToLabel = {
-    pct_overflowing_lectures: '% Overflowing lectures',
-    pct_overqualified_rooms_for_lectures: '% Overqualified rooms for lectures',
-    nr_used_rooms: 'Nr used rooms'
-}
+import { METRIC_FIELD_TO_LABEL } from '../../utils/Metrics'
 
 function renderMetricsPlot(scores, selectedMetrics) {
     return renderStatefulContent(
@@ -20,8 +15,8 @@ function renderMetricsPlot(scores, selectedMetrics) {
             }
             layout={{
                 title: 'Selectable Comparison Chart',
-                xaxis: { title: metricFieldToLabel[selectedMetrics[0]] },
-                yaxis: { title: metricFieldToLabel[selectedMetrics[1]] }
+                xaxis: { title: METRIC_FIELD_TO_LABEL[selectedMetrics[0]] },
+                yaxis: { title: METRIC_FIELD_TO_LABEL[selectedMetrics[1]] }
             }}
         />
     )
@@ -65,10 +60,11 @@ function renderBar(score, selectedMetrics) {
 }
 
 function renderMetricsSelector(selectedMetrics, setSelectedScores) {
-    return Object.keys(metricFieldToLabel)
+    return Object.keys(METRIC_FIELD_TO_LABEL)
         .map((k) => <Form.Check
+            key={k}
             type='checkbox'
-            label={metricFieldToLabel[k]}
+            label={METRIC_FIELD_TO_LABEL[k]}
             checked={selectedMetrics.includes(k)}
             onChange={e => {
                 setSelectedScores(
@@ -88,7 +84,7 @@ function formatScore(score) {
 }
 
 function SelectableComparisonWidget({ scores }) {
-    const [selectedMetrics, setSelectedMetrics] = useState(Object.keys(metricFieldToLabel))
+    const [selectedMetrics, setSelectedMetrics] = useState(Object.keys(METRIC_FIELD_TO_LABEL))
 
     return (
         <Row>

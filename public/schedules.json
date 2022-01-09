@@ -1,7 +1,12 @@
 [
     {
         "id": 10,
-        "name": "My favorite schedule",
+        "name": "Schedule 1",
+        "status": "DONE"
+    },
+    {
+        "id": 11,
+        "name": "Schedule 2",
         "status": "DONE"
     },
     {

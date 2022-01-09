@@ -7,6 +7,7 @@ import ScheduleScores from "./schedule-scores/ScheduleScores";
 import ScheduleSelector from "./schedule-selector/ScheduleSelector";
 import DefaultComparisonWidget from "./default-comparison-widget/DefaultComparisonWidget";
 import SelectableComparisonWidget from "./selectable-comparison-widget/SelectableComparisonWidget"
+import HeatMapComparisonWidget from "./heat-map-comparison-widget/HeatMapComparisonWidget"
 
 export {
     NavigationBar,
@@ -17,5 +18,6 @@ export {
     ScheduleScores,
     ScheduleSelector,
     DefaultComparisonWidget,
-    SelectableComparisonWidget
+    SelectableComparisonWidget,
+    HeatMapComparisonWidget
 }
