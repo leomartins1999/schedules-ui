@@ -6,6 +6,7 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getSchedules()
             return SuccessState(res)
         } catch (err) {
+            console.error(err)
             return ErrorState()
         }
     };
@@ -15,6 +16,7 @@ const SchedulesService = (gateway) => {
             const res = await gateway.createSchedule(name, file)
             return SuccessState(res.id)
         } catch (err) {
+            console.error(err)
             return ErrorState()
         }
     }
@@ -24,6 +26,7 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getScheduleDetails(scheduleId)
             return SuccessState(res)
         } catch (err) {
+            console.error(err)
             return ErrorState()
         }
     };
@@ -33,6 +36,7 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getScheduleClasses(scheduleId)
             return SuccessState(res)
         } catch (err) {
+            console.error(err)
             return ErrorState()
         }
     }
@@ -42,6 +46,7 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getScheduleDates(scheduleId)
             return SuccessState(res)
         } catch (err) {
+            console.error(err)
             return ErrorState()
         }
     }
@@ -51,6 +56,7 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getScheduleLectures(scheduleId, klass, startDate, endDate)
             return SuccessState(res)
         } catch (err) {
+            console.error(err)
             return ErrorState()
         }
     }
@@ -60,36 +66,68 @@ const SchedulesService = (gateway) => {
             const res = await gateway.getScheduleScores(scheduleId)
             return SuccessState(res)
         } catch (err) {
+            console.error(err)
             return ErrorState()
         }
     }
 
     async function getSchedulesScores() {
         try {
-            const schedules = await gateway.getSchedules()
+            const schedules = await getDoneSchedules()
 
             const results = await Promise.all(
                 schedules
-                    .filter(s => s.status === "DONE")
                     .map(s => s.id)
                     .map(id => gateway.getScheduleScores(id))
             )
 
-            const scores = results
-                .map(score => {
-                    const scoreWithName = score
-
-                    scoreWithName.name = schedules
-                        .find(schedule => schedule.id === score.schedule_id)
-                        .name
-                    return scoreWithName
-                })
+            const scores = injectScheduleNameInScore(results, schedules)
 
             return SuccessState(scores)
 
         } catch (err) {
+            console.error(err)
             return ErrorState()
         }
+    }
+
+    async function getPivotedScores() {
+        try {
+            const schedules = await getDoneSchedules()
+
+            const results = await Promise.all(
+                schedules
+                    .map(s => s.id)
+                    .map(id => gateway.getPivotedScores(id))
+            )
+
+            const scores = injectScheduleNameInScore(results, schedules)
+
+            return SuccessState(scores)
+
+        } catch (err) {
+            console.error(err)
+            return ErrorState()
+        }
+    }
+
+    async function getDoneSchedules() {
+        const schedules = await gateway.getSchedules()
+
+        return schedules.filter(s => s.status === 'DONE')
+    }
+
+    function injectScheduleNameInScore(results, schedules) {
+        return results
+            .map(score => {
+                const scoreWithName = score
+
+                scoreWithName.name = schedules
+                    .find(schedule => schedule.id === score.schedule_id)
+                    .name
+
+                return scoreWithName
+            })
     }
 
     return {
@@ -100,7 +138,8 @@ const SchedulesService = (gateway) => {
         getScheduleDates,
         getScheduleLectures,
         getScheduleScores,
-        getSchedulesScores
+        getSchedulesScores,
+        getPivotedScores
     }
 };
 

@@ -40,7 +40,7 @@ function withRouting(service) {
 
 function PageContainer({ service }) {
     return (
-        <Container className="bg-light">
+        <Container className="bg-light mb-2">
             {withRouting(service)}
         </Container>
     );

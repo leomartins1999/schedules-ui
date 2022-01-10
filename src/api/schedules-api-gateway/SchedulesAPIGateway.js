@@ -4,8 +4,9 @@ const SCHEDULES_PATH = process.env.REACT_APP_SCHEDULES_PATH;
 const SCHEDULE_DETAILS_PATH = process.env.REACT_APP_SCHEDULE_PATH;
 const SCHEDULE_CLASSES_PATH = process.env.REACT_APP_SCHEDULE_CLASSES_PATH;
 const SCHEDULE_DATES_PATH = process.env.REACT_APP_SCHEDULE_DATES_PATH;
-const SCHEDULE_LECTURES_PATH = process.env.REACT_APP_SCHEDULE_LECTURES_PATH
-const SCHEDULE_SCORES_PATH = process.env.REACT_APP_SCHEDULE_SCORES_PATH
+const SCHEDULE_LECTURES_PATH = process.env.REACT_APP_SCHEDULE_LECTURES_PATH;
+const SCHEDULE_SCORES_PATH = process.env.REACT_APP_SCHEDULE_SCORES_PATH;
+const SCHEDULE_PIVOTED_SCORES_PATH = process.env.REACT_APP_SCHEDULE_PIVOTED_SCORES_PATH
 
 async function getSchedules() {
     const resp = await fetch(SCHEDULES_PATH);
@@ -62,7 +63,7 @@ async function getScheduleLectures(scheduleId, klass, startDate, endDate) {
     )
 
     const resp = await fetch(url);
-    if (!resp.ok) throw Error(`Error fetching schedule dates for schedule ${scheduleId}!`);
+    if (!resp.ok) throw Error(`Error fetching schedule lectures for schedule ${scheduleId}!`);
 
     return await resp.json();
 }
@@ -71,7 +72,16 @@ async function getScheduleScores(scheduleId) {
     const url = injectURLParameters(SCHEDULE_SCORES_PATH, { id: scheduleId })
 
     const resp = await fetch(url);
-    if (!resp.ok) throw Error(`Error fetching schedule dates for schedule ${scheduleId}!`);
+    if (!resp.ok) throw Error(`Error fetching schedule scores for schedule ${scheduleId}!`);
+
+    return await resp.json();
+}
+
+async function getPivotedScores(scheduleId) {
+    const url = injectURLParameters(SCHEDULE_PIVOTED_SCORES_PATH, { id: scheduleId })
+
+    const resp = await fetch(url);
+    if (!resp.ok) throw Error(`Error fetching schedule pivotted scores for schedule ${scheduleId}!`);
 
     return await resp.json();
 }
@@ -111,7 +121,8 @@ const SchedulesAPIGateway = {
     getScheduleClasses,
     getScheduleDates,
     getScheduleLectures,
-    getScheduleScores
+    getScheduleScores,
+    getPivotedScores
 }
 
 export default SchedulesAPIGateway

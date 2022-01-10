@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card'
 import Accordion from 'react-bootstrap/Accordion';
 
-import { DefaultComparisonWidget, SelectableComparisonWidget } from '../../components/index'
+import { DefaultComparisonWidget, SelectableComparisonWidget, HeatMapComparisonWidget } from '../../components/index'
 import { LoadingState } from '../../utils/State';
 
 async function fetchScheduleScores(service, setScores) {
@@ -10,11 +10,21 @@ async function fetchScheduleScores(service, setScores) {
   setScores(scores)
 }
 
+async function fetchPivotedScores(service, setPivotedScores) {
+  const pivotedScores = await service.getPivotedScores()
+  setPivotedScores(pivotedScores)
+}
+
 function ComparePage({ service }) {
   const [scores, setScores] = useState(LoadingState())
+  const [pivotedScores, setPivotedScores] = useState(LoadingState())
 
   useEffect(() => {
     fetchScheduleScores(service, setScores)
+  }, [service])
+
+  useEffect(() => {
+    fetchPivotedScores(service, setPivotedScores)
   }, [service])
 
   return (
@@ -35,6 +45,12 @@ function ComparePage({ service }) {
               <Accordion.Header>Customizable Comparison</Accordion.Header>
               <Accordion.Body>
                 <SelectableComparisonWidget scores={scores} />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>Heat Map Comparison</Accordion.Header>
+              <Accordion.Body>
+                <HeatMapComparisonWidget scores={pivotedScores} />
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
