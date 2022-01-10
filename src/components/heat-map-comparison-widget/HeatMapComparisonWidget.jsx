@@ -18,19 +18,11 @@ function renderPlot(scores, metric, pivot) {
 }
 
 function mapScoresToData(scheduleScores, metric, pivot) {
-    console.log(scheduleScores)
-
     const scores = scheduleScores.map(score => score.scores[pivot])
-
-    console.log(scores)
 
     const columns = getHeatmapColumns(scores)
     const names = getScheduleNames(scheduleScores)
     const lines = getHeatmapLines(scores, metric, columns)
-
-    console.log("Columns: ", columns)
-    console.log("Names: ", names)
-    console.log("Lines: ", lines)
 
     return [{
         x: columns,
