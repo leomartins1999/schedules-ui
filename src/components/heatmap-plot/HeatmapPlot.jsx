@@ -1,4 +1,5 @@
 import Plot from 'react-plotly.js';
+import { extractScoresForPivot, getKeysForPivotedMetrics } from '../../utils/Metrics';
 import { renderStatefulContent } from '../../utils/State'
 
 function renderPlot(scores, metric, pivot) {
@@ -6,15 +7,15 @@ function renderPlot(scores, metric, pivot) {
         scores,
         (v) => <Plot
             data={mapScoresToData(v, metric, pivot)}
-            layout={{ title: 'Heatmap Comparison Chart', autosize: true }}
+            layout={{ title: 'Heatmap Comparison Chart', autosize: true, width: 1000 }}
         />
     )
 }
 
 function mapScoresToData(scheduleScores, metric, pivot) {
-    const scores = scheduleScores.map(score => score.scores[pivot])
+    const scores = extractScoresForPivot(scheduleScores, pivot)
 
-    const columns = getHeatmapColumns(scores)
+    const columns = getKeysForPivotedMetrics(scores)
     const names = getScheduleNames(scheduleScores)
     const lines = getHeatmapLines(scores, metric, columns)
 
@@ -25,14 +26,6 @@ function mapScoresToData(scheduleScores, metric, pivot) {
         type: 'heatmap',
         hoverongaps: false
     }]
-}
-
-function getHeatmapColumns(scores) {
-    const keys = scores
-        .map(score => score.map(agg => agg.key))
-        .flat()
-
-    return [...new Set(keys)]
 }
 
 function getScheduleNames(scores) {

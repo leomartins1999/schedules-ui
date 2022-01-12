@@ -6,7 +6,7 @@ function renderPlot(scores) {
         scores,
         v => <Plot
             data={v.map(renderScore)}
-            layout={{ title: 'Default Comparison Chart' }}
+            layout={{ title: 'Default Comparison Chart', width: 1000 }}
         />
     )
 }
