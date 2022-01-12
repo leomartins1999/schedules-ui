@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card'
 import Accordion from 'react-bootstrap/Accordion';
 
-import { DefaultComparisonWidget, SelectableComparisonWidget, HeatMapComparisonWidget } from '../../components/index'
+import { DefaultComparisonWidget, SelectableComparisonWidget, PivotedMetricComparisonWidget, renderHeatmapPlot, renderParallelChartPlot } from '../../components/index'
 import { LoadingState } from '../../utils/State';
 
 async function fetchScheduleScores(service, setScores) {
@@ -50,7 +50,13 @@ function ComparePage({ service }) {
             <Accordion.Item eventKey="2">
               <Accordion.Header>Heat Map Comparison</Accordion.Header>
               <Accordion.Body>
-                <HeatMapComparisonWidget scores={pivotedScores} />
+                <PivotedMetricComparisonWidget scores={pivotedScores} plotSupplier={renderHeatmapPlot} />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="3">
+              <Accordion.Header>Parallel Chart Comparison</Accordion.Header>
+              <Accordion.Body>
+                <PivotedMetricComparisonWidget scores={pivotedScores} plotSupplier={renderParallelChartPlot} />
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>

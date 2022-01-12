@@ -1,65 +1,9 @@
 import { useState } from 'react';
-import Plot from 'react-plotly.js';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton'
-import { renderStatefulContent } from '../../utils/State'
 import { PIVOTED_METRIC_FIELD_TO_LABEL, DEFAULT_METRIC, PIVOT_TYPE_TO_LABEL, DEFAULT_PIVOT_TYPE } from '../../utils/Metrics';
-
-function renderPlot(scores, metric, pivot) {
-    return renderStatefulContent(
-        scores,
-        (v) => <Plot
-            data={mapScoresToData(v, metric, pivot)}
-            layout={{ title: 'Heatmap Comparison Chart', autosize: true }}
-        />
-    )
-}
-
-function mapScoresToData(scheduleScores, metric, pivot) {
-    const scores = scheduleScores.map(score => score.scores[pivot])
-
-    const columns = getHeatmapColumns(scores)
-    const names = getScheduleNames(scheduleScores)
-    const lines = getHeatmapLines(scores, metric, columns)
-
-    return [{
-        x: columns,
-        y: names,
-        z: lines,
-        type: 'heatmap',
-        hoverongaps: false
-    }]
-}
-
-function getHeatmapColumns(scores) {
-    const keys = scores
-        .map(score => score.map(agg => agg.key))
-        .flat()
-
-    return [...new Set(keys)]
-}
-
-function getScheduleNames(scores) {
-    return scores.map(s => s.name)
-}
-
-function getHeatmapLines(scores, metric, columns) {
-    return scores.map(score => getHeatmapLine(score, metric, columns))
-}
-
-function getHeatmapLine(score, metric, columns) {
-    const lineElements = []
-
-    for (const column of columns) {
-        const element = score.find(agg => agg.key === column)
-        const value = element === undefined ? 0 : element[metric]
-        lineElements.push(value)
-    }
-
-    return lineElements
-}
 
 function renderMetricSelector(metric, setMetric) {
     return (
@@ -106,14 +50,14 @@ function renderPivotTypeSelectorButtons(pivot, setPivot) {
         )
 }
 
-function HeatMapComparisonWidget({ scores }) {
+function PivotedMetricComparisonWidget({ scores, plotSupplier }) {
     const [metric, setMetric] = useState(DEFAULT_METRIC)
     const [pivot, setPivot] = useState(DEFAULT_PIVOT_TYPE)
 
     return (
         <Row>
             <Col sm={10}>
-                {renderPlot(scores, metric, pivot)}
+                {plotSupplier(scores, metric, pivot)}
             </Col>
             <Col className="text-start" sm={2}>
                 <h4>Selected metric</h4>
@@ -125,4 +69,4 @@ function HeatMapComparisonWidget({ scores }) {
     )
 }
 
-export default HeatMapComparisonWidget
+export default PivotedMetricComparisonWidget

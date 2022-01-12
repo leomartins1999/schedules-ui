@@ -7,7 +7,10 @@ import ScheduleScores from "./schedule-scores/ScheduleScores";
 import ScheduleSelector from "./schedule-selector/ScheduleSelector";
 import DefaultComparisonWidget from "./default-comparison-widget/DefaultComparisonWidget";
 import SelectableComparisonWidget from "./selectable-comparison-widget/SelectableComparisonWidget"
-import HeatMapComparisonWidget from "./heat-map-comparison-widget/HeatMapComparisonWidget"
+import PivotedMetricComparisonWidget from "./pivoted-metric-comparison-widget/PivotedMetricComparisonWidget";
+
+import renderHeatmapPlot from "./heatmap-plot/HeatmapPlot";
+import renderParallelChartPlot from "./parallel-chart-plot/ParallelChartPlot";
 
 export {
     NavigationBar,
@@ -19,5 +22,8 @@ export {
     ScheduleSelector,
     DefaultComparisonWidget,
     SelectableComparisonWidget,
-    HeatMapComparisonWidget
+    PivotedMetricComparisonWidget,
+
+    renderHeatmapPlot,
+    renderParallelChartPlot
 }

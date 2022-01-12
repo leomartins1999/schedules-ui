@@ -17,3 +17,15 @@ export const PIVOT_TYPE_TO_LABEL = [
 ]
 
 export const DEFAULT_PIVOT_TYPE = PIVOT_TYPE_TO_LABEL[0].type
+
+export function getKeysForPivotedMetrics(scores) {
+    const keys = scores
+        .map(score => score.map(agg => agg.key))
+        .flat()
+
+    return [...new Set(keys)]
+}
+
+export function extractScoresForPivot(scores, pivot) {
+    return scores.map(score => score.scores[pivot])
+}

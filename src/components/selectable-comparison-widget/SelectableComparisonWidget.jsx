@@ -16,7 +16,8 @@ function renderMetricsPlot(scores, selectedMetrics) {
             layout={{
                 title: 'Selectable Comparison Chart',
                 xaxis: { title: METRIC_FIELD_TO_LABEL[selectedMetrics[0]] },
-                yaxis: { title: METRIC_FIELD_TO_LABEL[selectedMetrics[1]] }
+                yaxis: { title: METRIC_FIELD_TO_LABEL[selectedMetrics[1]] },
+                width: 1000
             }}
         />
     )
@@ -88,10 +89,10 @@ function SelectableComparisonWidget({ scores }) {
 
     return (
         <Row>
-            <Col sm={8}>
+            <Col sm={10}>
                 {renderMetricsPlot(scores, selectedMetrics)}
             </Col>
-            <Col className="text-start" sm={4}>
+            <Col className="text-start" sm={2}>
                 <h4>Selected metrics</h4>
                 {renderMetricsSelector(selectedMetrics, setSelectedMetrics)}
             </Col>
